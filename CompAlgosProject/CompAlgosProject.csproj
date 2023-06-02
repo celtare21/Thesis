@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\ExcelProcessor\ExcelProcessor.csproj" />
+      <ProjectReference Include="..\LZOAlgo\LZOAlgo.csproj" />
+      <ProjectReference Include="..\MP3Converter\MP3Converter.csproj" />
+      <ProjectReference Include="..\PNGConverter\PNGConverter.csproj" />
+      <ProjectReference Include="..\RunLengthAlgo\RunLengthAlgo.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="EasyCompressor.LZ4" Version="1.4.0" />
+      <PackageReference Include="EasyCompressor.Zstd" Version="1.4.0" />
+      <PackageReference Include="Joveler.Compression.XZ" Version="4.1.0" />
+      <PackageReference Include="SharpCompress" Version="0.32.2" />
+      <PackageReference Include="SharpZipLib" Version="1.4.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="words.txt">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="california.wav">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="4k.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
+</Project>
